@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import {Button} from "antd";
+import {Button, DatePicker} from "antd";
 import { Tabs } from 'antd';
 import ListItem from "./ListItem";
+import moment from 'moment';
 const { TabPane } = Tabs;
 
 
@@ -12,8 +13,29 @@ function Todos(props) {
         {txt: 'Not get covid'}
     ]);
 
+    const [expired, setExpired] = useState(false);
+
+    const onDateChange = async (m) => {
+        if(m.isBefore(moment())){
+            setExpired(true);
+        } else {
+            setExpired(false);
+        }
+    };
+
     return (
         <div className={'p-5 border m-5 md:m-12 lg:m-20'}>
+
+            {/*<div className={expired ? 'border border-red-500' : 'border border-gray-300'}>*/}
+            {/*    <DatePicker onChange={onDateChange} bordered={false} />*/}
+            {/*</div>*/}
+
+            {/*<br/>*/}
+            {/*<br/>*/}
+            {/*<br/>*/}
+
+            {/*{expired && <h2>You cannot select a date in the past!</h2>}*/}
+
 
             <div className={'flex justify-center items-center'}>
                 <input type="text" className={'border p-1 mr-5 rounded w-full'} placeholder={'Task...'}/>
