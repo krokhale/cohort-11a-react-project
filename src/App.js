@@ -12,11 +12,16 @@ import {
 import About from "./About";
 import Todos from "./Todos";
 import Contact from "./Contact";
+import Dog from "./Dog";
 
 function App() {
   return (
       <Router>
           <Nav />
+
+          <Dog />
+
+
 
           <Switch>
               <Route path="/about">
