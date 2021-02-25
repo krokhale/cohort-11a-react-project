@@ -13,13 +13,18 @@ import About from "./About";
 import Todos from "./Todos";
 import Contact from "./Contact";
 import Dog from "./Dog";
+import React, {useState, useEffect, useContext} from 'react';
+import Django from "./django";
 
 function App() {
+
+
+
   return (
       <Router>
           <Nav />
 
-          <Dog />
+          {/*<Dog />*/}
 
 
 
@@ -32,6 +37,9 @@ function App() {
               </Route>
               <Route path="/contact">
                   <Contact />
+              </Route>
+              <Route path="/django">
+                  <Django />
               </Route>
           </Switch>
 

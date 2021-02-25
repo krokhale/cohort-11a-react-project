@@ -26,6 +26,11 @@ function Nav(props) {
                             <span className={'text-xl text-white font-bold cursor-pointer'}>Contact</span>
                         </NavLink>
                     </li>
+                    <li className={'inline p-5'}>
+                        <NavLink to="/django" activeClassName="underline text-white">
+                            <span className={'text-xl text-white font-bold cursor-pointer'}>Django</span>
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
 
